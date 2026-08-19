@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+import { getMeetings } from '../api'
 import '../module.css'
 
 const meetings = [
@@ -6,6 +8,17 @@ const meetings = [
 ]
 
 export function MeetingListPage() {
+  const [meetings, setMeetings] = useState([])
+
+  useEffect(() => {
+    getMeetings().then(res => {
+      console.log("meetings", res)
+      if(res.code === 200) {
+        setMeetings(res.data)
+      }
+    })
+  }, [])
+
   return (
     <div className="oa-module-page">
       <h2>会议列表</h2>

@@ -15,6 +15,9 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
+    "paths": {
+      "@zdy-oa/utils": ["../oa-utils/src/index.ts"]
+    },
 
     /* Linting */
     "noUnusedLocals": true,
