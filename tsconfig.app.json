@@ -15,7 +15,9 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
+    "baseUrl": ".",
     "paths": {
+      "@/*": ["src/*"],
       "@zdy-oa/utils": ["../oa-utils/src/index.ts"]
     },
 
